@@ -1,0 +1,19 @@
+<section id="page-skills" class="page-skills">
+  <div class="container">
+    <header class="section-header">
+       <h2 class="section-title"><span>Stories</span></h2>
+         <div class="spacer"></div>
+       <p class="section-subtitle">Please read some of our sucess stories.</p>
+     </header>
+     <div class="row">
+       {% for story in site.stories %}
+        <a href="{{ story.url }}">
+          <div class="col-md-3">
+            <img src="{{ story.image }}"/>
+            <h3>{{ story.title }}</h3>
+          </div>
+        </a>
+       {% endfor %}
+     </div>
+   </div>
+</section>

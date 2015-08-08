@@ -1,0 +1,77 @@
+.vegas-loading {
+    border-radius: 10px;
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    background: url(../img/loading.gif) no-repeat center center;
+    height: 32px;
+    left: 20px;
+    position: fixed;
+    top: 20px;
+    width: 32px;
+    z-index: 0;
+}
+
+.vegas-overlay {
+    background: transparent url(../img/overlays/16.png);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.vegas-background {
+    -ms-interpolation-mode: bicubic;
+    image-rendering: optimizeQuality;
+    max-width: none !important; /* counteracts global img modification by twitter bootstrap library */
+    z-index: -2;
+}
+
+.vegas-overlay,
+.vegas-background {
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.slider-controls{
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.slider-controls li{
+    list-style: none;
+}
+
+#page-welcome:hover .slider-controls{
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.slider-controls li a{
+        position: absolute;
+        z-index: 10;
+        top: 40%;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+}
+.next{
+    background: url("../img/next.png");
+    margin-right: 70px;
+    right: 0;
+    opacity: 0.3;
+}
+.prev{
+    background: url("../img/prev.png");
+    margin-left: 70px;
+    left: 0;
+    opacity: 0.3;
+}
+.next:hover,
+.prev:hover{opacity: 1;}

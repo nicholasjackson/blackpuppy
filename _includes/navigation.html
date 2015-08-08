@@ -1,0 +1,32 @@
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav" id="main-menu">
+        <li><a href="#page-welcome">Home</a></li>
+        <li><a href="#page-profile">About Us</a></li>
+        <li>
+          <div class="dropdown">
+          <a data-toggle="dropdown" href="#" style="color:#777">Stories<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            {% for story in site.stories %}
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ story.url }}">{{ story.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        </li>
+        <li><a href="#page-education">Profiles</a></li>
+        <li><a href="#page-experience">Experience</a></li>
+        <li><a href="#page-portfolio">Photos</a></li>
+        <li><a href="#page-contact">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>

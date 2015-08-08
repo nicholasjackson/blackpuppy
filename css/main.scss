@@ -3,50 +3,67 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+.left { float: left; }
+.right { float: right; }
+.text-center {text-align: center;}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
 }
 
+@media(max-width:992px) {
+
+  #page-profile .profile{
+    margin:0 auto 20px auto;
+  }
+
+}
+
+@media(max-width: 479px) {
+
+  #page-welcome header h1 {
+    font-size: 2em;
+  }
+
+  #page-welcome header p {
+    font-size: 1em;
+    line-height: 3em;
+  }
+
+ .section-title {
+  font-size: 1.5em;
+
+  }
+
+  .section-header p {
+    font-size: 1.2em;
+  }
+
+  #page-skills{
+    text-align: center;
+  }
+
+  #grid{
+    text-align: center;
+  }
+
+  #page-profile .profile {
+    margin:0 auto 20px auto;
+  }
+
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+        "charts",
+        "dividers",
+        "forms",
+        "icons",
         "layout",
-        "syntax-highlighting"
+        "navigation",
+        "portfolio",
+        "slider"
 ;

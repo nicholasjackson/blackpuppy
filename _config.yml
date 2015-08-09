@@ -17,5 +17,4 @@ collections:
   stories:
     output: true
 
-exclude: [vendor]
-exclude: ['Gemfile.lock', 'Gemfile']
+exclude: [vendor,'Gemfile.lock', 'Gemfile']

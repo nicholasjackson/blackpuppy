@@ -1,14 +1,16 @@
 language: ruby
 rvm:
 - 2.1
-
-before_script:
- - chmod +x ./script/cibuild # or do this locally and commit
-
-# Assume bundler is being used, therefore
-# the `install` step will run `bundle install` by default.
-script: ./script/cibuild
-
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: m1ZQystegKDguOgU7NYL1uZslvxnTjcPx1q+To2emMWbEJNDN5LzJI7/OYhQuJrO/f/0sScf3HkhA9WQQv42JnGrCoXN98+l1wPlOxrAbUb9GmBJYEUZN10dsllqHccW1TEg6BA1J4Vm2YVwU9XqWWTs80k72pD3nPuFaiUnD1MT3Ui3wsYQUTp9yw7NZzspDMiya49D95xRkpD8BUIXjTJdQnd97wJZb5dQpbOXpgPA3gDFt+CleQz/pQlDcszbRB/vHj3EcOKx71mOXrq0D/3JS6r1FeMGbMcq+mL8ePU5T0U8QmpNwJfrO/yrvduRZWW6s1Bp6jH3doe/HLWZ+C7/WZoXaYXbuABAhFGW+qhKZoE8dRrHMpkpt/zM5geCoQWlDXtJY2qHfwuJPDnJ86NfwpqFBZxvr2J4bO+FdecpzRcb8KSBWszeYjiz6EXecfyYe7UmsrQ6FICGb0NnF/8XyjaciiKHDL/4yHctvSahCZtRg6cXlW8mBK8n9Ib1Y7+QRJOZuqmqiPzop+4fmgTRoSisfSgBJvf+n+hzKbbzTACe9/WEIPivV29F+O8tmrfNlGDcO41VSEUcoCSnhNjoIPX9ZtwKzEjrvJgCm12LG7Udo2zITXF9MvTS226FKEz0UDIDcrN3P0Q6mItJpUvQ/uf3j86A4GgrzzYmn/U=
+  - secure: Dc9Tmrd3amlS/ZdEOFtSbZ5BrHBLzhrkPRlE8/D092n9+Bjg26e36cKdSUSe8OsB3k7qwgdmvRssGhKAj1yRoCX75MkwbA4XkiDC2TZfcnVkA8gMScfjuDN+wIXXo/cMOsiGuqAloqPnvkkOSO8xAWj00jsD2aJLwAir6jXgc/RxWVPdKmLwITbujKmZSyp15twK4kcmKsrR8zZY/lbVKg7UEaQcZj46Tk+igq/4/blP57wfas4ASCQ4L3erEcKNyWGdEy4CXocCJN4IzGAw5wXvuwb1kikCKKb4pKIiIvKQmcvKocHkhaKcBtC0DSighuhkjLZpCCE3TI4VK0UJsfgxh+uwJj8qUFIeQ4u2fei8mWMUWvdak7SHa++KzLUr02hB9cSZr2mHGsF25CpCHh7u4zspxlqMqq1fgDuwlU+PtqQDhkt1g1ZhTW7/xd1bLSuskZwgP0yhXWDs91ySwDh1F0+GbKivQMBxyAtg+L8QGXEaiuHh1ielKfe0Dj8DCHhJxcdFxBpUPdayfsIHpvpoE2RyaTpovTwGkKMeFH2ch5wrxj+qoqRpnAnis2RQvqYYH0/+hEG7ctmg/vd++kMT1bYXhkwgNoTpu2FRiEAB8hcz9RF9Wl/Aa4lI3fzTFs9FiaVvSa4Q1tn4g8JdX5FmBVcPcau388nIhVRkQaI=
+
+before_script:
+- chmod +x ./script/cibuild
+script:
+- ./script/cibuild
+after_success:
+- find _site -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USERNAME:$FTP_PASSWORD
+  ftp://waws-prod-am2-011.ftp.azurewebsites.windows.net/site/wwwroot/{} \;

@@ -11,5 +11,4 @@ before_script:
 script:
 - ./script/cibuild
 after_success:
-- find _site -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USERNAME:$FTP_PASSWORD
-  ftp://waws-prod-am2-011.ftp.azurewebsites.windows.net/site/wwwroot/{} \;
+- find _site -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USERNAME:$FTP_PASSWORD ftp://waws-prod-am2-011.ftp.azurewebsites.windows.net/site/wwwroot/{}  \; | sed 's/_site\///g'

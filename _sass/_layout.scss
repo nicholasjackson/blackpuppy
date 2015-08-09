@@ -10,8 +10,6 @@
     background-size: cover;
 }
 
-
-
 #page-welcome header{
     color:#fff;
     padding-top:20%;
@@ -38,13 +36,17 @@
     text-transform: uppercase;
 }
 
-
-#page-profile{
+#page-trustees{
     padding: 75px 0;
     background:#fff;
 }
 
-#page-profile .profile{
+#page-about{
+    padding: 75px 0;
+    background:#fff;
+}
+
+#page-about .profile{
     border: 5px solid #333;
     width:225px;
     height:225px;
@@ -52,8 +54,7 @@
 
 }
 
-
-#page-skills{
+#page-stories{
     padding: 75px 0;
     background:#f7f7f7;
     text-align: center;
@@ -64,13 +65,12 @@
     background:#fff;
 }
 
-
-#page-experience{
+#page-donate{
      padding: 75px 0;
     background:#f7f7f7;
 }
 
-#page-portfolio{
+#page-gallery{
     padding: 75px 0;
     background:#fff;
 

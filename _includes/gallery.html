@@ -1,0 +1,35 @@
+<section id="page-gallery" class="page-gallery">
+     <div class="container">
+       <div class="row">
+           <header class="section-header">
+               <h2 class="section-title"><span>Image Gallery</span></h2>
+                 <div class="spacer"></div>
+               <p class="section-subtitle">Some images and photos.</p>
+           </header>
+
+           <div id="grid-controls-wrapper">
+           <ul class="nav nav-pills center-pills grid-controls">
+             <li class="active filter"><a href="javascript:void(0)" data-filter="*">All</a></li>
+             <li class="filter" ><a href="javascript:void(0)" data-filter=".adoption">Little Adoption Shop</a></li>
+             <li class="filter" ><a href="javascript:void(0)" data-filter=".beck-stone">Dr Beck and Stone</a></li>
+             <li class="filter"><a href="javascript:void(0)"  data-filter=".began">Where it all began</a></li>
+           </ul>
+         </div>
+
+         <div>
+           <ul id="grid" class="grid-wrapper">
+             {% for photo in site.data.gallery %}
+             <li class="mix {{ photo.category }}" >
+              <a href="{{ photo.large-url }}">
+                <div class="overlay">
+                  <i class="fa fa-search"></i>
+                </div>
+                <img src="{{ photo.large-url }}" alt="{{ photo.name }}" >
+              </a>
+             </li>
+             {% endfor %}
+           </ul>
+         </div>
+       </div>
+   </div>
+</section>

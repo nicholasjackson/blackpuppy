@@ -4,6 +4,7 @@ title:  "Joe's Story"
 date:   2015-07-09 21:24:40
 categories: stories
 image: "img/stories/joe.png"
+logo: "img/stories/joe_logo.png"
 ---
 
 My name is Joe I am the brother of little black puppy,  when I first met Raehaneh I was living in an old shed by a furniture factory.  There was no food, it was wet, dirty and since I was the largest of the litter it was down to me to try and defend my family.  

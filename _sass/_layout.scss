@@ -55,6 +55,14 @@
   padding: 75px 0;
   background:#f7f7f7;
   text-align: center;
+
+  .story-logo {
+    margin: auto;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: 3px solid $standard-blue;
+  }
 }
 
 #page-education{

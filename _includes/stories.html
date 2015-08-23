@@ -9,7 +9,7 @@
        {% for story in site.stories %}
         <a href="{{ story.url }}">
           <div class="col-md-3">
-            <img src="{{ story.image }}" alt="{{ story.title }}"/>
+            <div style="background: url({{ story.logo }})" class="story-logo"></div>
             <h3>{{ story.title }}</h3>
           </div>
         </a>

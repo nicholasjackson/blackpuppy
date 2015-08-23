@@ -3,7 +3,7 @@ layout: story
 title:  "Joe's Story"
 date:   2015-07-09 21:24:40
 categories: stories
-image: "img/stories/joe.png"
+image: "img/stories/joe_banner.png"
 logo: "img/stories/joe_logo.png"
 ---
 

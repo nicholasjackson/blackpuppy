@@ -37,6 +37,10 @@
 #page-trustees{
   padding: 75px 0;
   background:#fff;
+
+  .trustee {
+    
+  }
 }
 
 #page-about{
@@ -63,11 +67,6 @@
     border-radius: 50%;
     border: 3px solid $standard-blue;
   }
-}
-
-#page-education{
-  padding: 75px 0;
-  background:#fff;
 }
 
 #page-donate{

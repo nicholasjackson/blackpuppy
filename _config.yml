@@ -1,12 +1,11 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: The Little Black Puppy Charity
+email: contact@blackpuppy.info
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+The little black puppy charity was set up for the benefit of the public to relieve the suffering of dogs and other animals in china in need of care and attention and, in particular, to provide resources and other facilities for local projects offering the reception, care and treatment of such animals.
+We promote humane behaviour towards dogs and other animals in china by providing funds to projects able to provide appropriate local care, protection, treatment and security for dogs which are in need of care and attention by reason of sickness, maltreatment, poor circumstances or ill usage.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://blackpuppy.info" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 

@@ -4,16 +4,12 @@
 @charset "utf-8";
 
 .left { float: left; }
+
 .right { float: right; }
+
 .text-center {text-align: center;}
-.centered {
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-}
 
 @media(max-width:992px) {
-
   #page-profile .profile{
     margin:0 auto 20px auto;
   }
@@ -21,7 +17,6 @@
 }
 
 @media(max-width: 479px) {
-
   #page-welcome header h1 {
     font-size: 2em;
   }
@@ -53,7 +48,6 @@
   }
 
 }
-
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

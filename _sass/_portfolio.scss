@@ -8,6 +8,7 @@
 .center-pills {
     display: inline-block;
 }
+
 #grid .mix{
     width: 200px;
     height: 150px;
@@ -19,13 +20,11 @@
 
 }
 
-
 #grid .mix .thumbnail{
     border:2px thin #F7F7F7;
     padding:0;
     border-radius:0;
 }
-
 
 #grid .mix .overlay{
     width: 200px;
@@ -45,8 +44,6 @@
     color: #fff;
     padding-top: 30%;
 }
-
-
 
 .isotope-item {
     z-index: 2;

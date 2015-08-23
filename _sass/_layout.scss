@@ -143,6 +143,15 @@
   border: 3px solid $standard-blue;
 }
 
+#puppy-banner {
+  .banner {
+    background: url(/img/blackpuppy100/banner.png);
+    background-size: cover;
+    max-width:100%;
+    min-height:400px;
+  }
+}
+
 #puppy-what{
   padding: 75px 0;
   background:#fff;

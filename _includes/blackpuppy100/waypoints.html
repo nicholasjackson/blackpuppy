@@ -6,30 +6,32 @@
       <p class="section-subtitle">Estimated timing and stops</p>
     </header>
     <div class="row">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>Waypoint</th>
-            <th>ETA</th>
-            <th>Duration</th>
-            <th>Elapsed Time</th>
-            <th>Section Distance</th>
-            <th>Distance (km)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for p in site.data.waypoints.points %}
+      <div class=".table-responsive">
+        <table class="table table-hover">
+          <thead>
             <tr>
-              <td>{{ p.name }}</td>
-              <td>{{ p.eta }}</td>
-              <td>{{ p.duration }}</td>
-              <td>{{ p.elapsed }}</td>
-              <td>{{ p.sdistance }}</td>
-              <td>{{ p.tdistance }}</td>
+              <th>Waypoint</th>
+              <th>ETA</th>
+              <th>Duration</th>
+              <th>Elapsed Time</th>
+              <th class="no-mobile">Section Distance</th>
+              <th class="no-mobile">Distance (km)</th>
             </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {% for p in site.data.waypoints.points %}
+              <tr>
+                <td>{{ p.name }}</td>
+                <td>{{ p.eta }}</td>
+                <td>{{ p.duration }}</td>
+                <td>{{ p.elapsed }}</td>
+                <td class="no-mobile">{{ p.sdistance }}</td>
+                <td class="no-mobile">{{ p.tdistance }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>

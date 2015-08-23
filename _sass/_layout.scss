@@ -146,16 +146,42 @@
 #puppy-what{
   padding: 75px 0;
   background:#fff;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  p {
+    @media (max-width: 480px) {
+      text-align: justify;
+    }
+  }
 }
 
 #puppy-why{
   padding: 75px 0;
   background:#f7f7f7;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  p {
+    @media (max-width: 480px) {
+      text-align: justify;
+    }
+  }
 }
 
 #puppy-who{
   padding: 75px 0;
   background:#fff;
+
+  article {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
 #puppy-map{
@@ -163,8 +189,8 @@
   background:#f7f7f7;
 
   #map {
-    height: 600px;
-    width: 600px;
+    height: 400px;
+    width: 100%;
     background-color: black;
   }
 }
@@ -172,4 +198,25 @@
 #puppy-waypoints{
   padding: 75px 0;
   background:#fff;
+
+  .no-mobile {
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+}
+
+#puppy-sponsors {
+  article {
+    text-align: center;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 40px;
+  }
+
+  .sponsor-logo {
+    height:170px;
+    line-height: 170px;
+    margin-bottom: 20px;
+  }
 }

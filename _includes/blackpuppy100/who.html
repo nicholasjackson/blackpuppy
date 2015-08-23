@@ -8,11 +8,15 @@
     <div class="row">
       {% for paddler in site.data.paddlers %}
         <div class="col-md-4">
-          <div style="background: url({{ paddler.profile-image }})" class="story-logo"></div>
-          <h3>{{ paddler.name }}</h3>
-          <p><b>Started paddling:</b> {{ paddler.paddling }}</p>
-          <p><b>Likes:</b> {{ paddler.likes }}</p>
-          <p><b>Dislikes:</b> {{ paddler.dislikes }}</p>
+          <article>
+            <header>
+              <div style="background: url({{ paddler.profile-image }})" class="story-logo"></div>
+              <h3>{{ paddler.name }}</h3>
+            </header>
+            <p><b>Started paddling:</b> {{ paddler.paddling }}</p>
+            <p><b>Likes:</b> {{ paddler.likes }}</p>
+            <p><b>Dislikes:</b> {{ paddler.dislikes }}</p>
+          </article>
         </div>
       {% endfor %}
     </div>

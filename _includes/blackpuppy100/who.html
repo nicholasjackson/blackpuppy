@@ -1,0 +1,20 @@
+<section id="puppy-who" class="puppy-who">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title"><span>Who</span></h2>
+      <div class="spacer"></div>
+      <p class="section-subtitle"></p>
+    </header>
+    <div class="row">
+      {% for paddler in site.data.paddlers %}
+        <div class="col-md-4">
+          <div style="background: url({{ paddler.profile-image }})" class="story-logo"></div>
+          <div>{{ paddler.name }}</div>
+          <p><b>Started paddling:</b> {{ paddler.paddling }}</p>
+          <p><b>Likes:</b> {{ paddler.likes }}</p>
+          <p><b>Dislikes:</b> {{ paddler.dislikes }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

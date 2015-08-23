@@ -11,7 +11,6 @@ $(document).ready(function(){
 	});
 
     /* For Bootstrap current state on portfolio sorting */
-
     $('ul.nav-pills li a').click(function (e) {
         $('ul.nav-pills li.active').removeClass('active')
         $(this).parent('li').addClass('active')
@@ -63,7 +62,7 @@ $('.grid-wrapper').magnificPopup({
 $(".navbar").sticky({topSpacing: 0});
 
 
-/* Scroll spy and scroll filter */
+/* Scroll spy and scroll filter
     $('#main-menu').onePageNav({
         currentClass: "active",
         changeHash: false,
@@ -72,44 +71,7 @@ $(".navbar").sticky({topSpacing: 0});
         filter: "",
         easing: "swing"
      });
-
-/* Charts*/
-
-$('.chart').waypoint(function() {
-    $(this).easyPieChart({
-    	   barColor: '#3498db',
-    	   size: '150',
-			easing: 'easeOutBounce',
-			onStep: function(from, to, percent) {
-				$(this.el).find('.percent').text(Math.round(percent));
-			}
-	 });
-}, {
-  triggerOnce: true,
-  offset: 'bottom-in-view'
-});
-
-
-/* VEGAS Home Slider */
-
-		$.vegas('slideshow', {
-			  backgrounds:[
-
-				{ src:'img/slider/04.jpg', fade:1000 },
-				{ src:'img/slider/03.jpg', fade:1000 },
-				{ src:'img/slider/02.jpg', fade:1000 },
-				{ src:'img/slider/01.jpg', fade:1000 }
-			  ]
-			})('overlay', {
-			  src:'img/overlays/16.png'
-			});
-			$( "#vegas-next" ).click(function() {
-			  $.vegas('next');
-			});
-			$( "#vegas-prev" ).click(function() {
-			  $.vegas('previous');
-		});
-
+*/
 
 /*Contact form */
       $('#contact-form').validate({

@@ -144,11 +144,17 @@
 }
 
 #puppy-banner {
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+  
   .banner {
-    background: url(/img/blackpuppy100/banner.png);
+    background: url(/img/blackpuppy100/banner_mobile.png) top center;
     background-size: cover;
-    max-width:100%;
-    min-height:400px;
+    background-repeat: no-repeat;
+    height: 0;
+    padding-top: 148%;
   }
 }
 

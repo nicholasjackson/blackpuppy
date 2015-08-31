@@ -15,4 +15,16 @@ collections:
   stories:
     output: true
 
+assets:
+  cache: false
+  prefix: "/assets"
+  assets:
+    - "*.jsx"
+    - "*.js"
+  sources:
+    - "_assets/jsx"
+    - "_assets/javascripts/vendor"
+
+gems: [jekyll-assets, react-jsx-sprockets]
+
 exclude: [vendor,'Gemfile.lock', 'Gemfile','README.md']

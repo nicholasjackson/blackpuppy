@@ -10,7 +10,9 @@ before_script:
 - sudo apt-get update
 - echo y | sudo apt-get install imagemagick --fix-missing
 - chmod +x ./script/cibuild
+- "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
 script:
+- rake e2e
 - ./script/cibuild
 after_success:
 - cd _site && find * -type f -exec curl --ftp-create-dirs -T {} -u $FTP_USERNAME:$FTP_PASSWORD ftp://waws-prod-am2-011.ftp.azurewebsites.windows.net/site/wwwroot/{} \;

@@ -12,12 +12,12 @@ task :e2e do
 
   begin
     pid = Process.fork do
-      exec "jekyll serve"
+      exec "bundle exec jekyll serve"
     end
 
     sleep 2
 
-    sh "cucumber #{feature}"
+    sh "bundle exec cucumber #{feature}"
   ensure
     Process.kill("HUP", pid)
     Process.wait

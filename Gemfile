@@ -11,4 +11,5 @@ gem 'mimic', '~> 0.4.3'
 
 group :jekyll_plugins do
    gem 'jekyll-assets', '~> 1.0.0'
+   gem 'jekyll-sitemap'
 end

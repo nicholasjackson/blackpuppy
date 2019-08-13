@@ -25,6 +25,9 @@ assets:
     - "_assets/jsx"
     - "_assets/javascripts/vendor"
 
-gems: [jekyll-assets]
+gems: [jekyll-assets, jekyll-sitemap]
+
+plugins:
+  - jekyll-sitemap
 
 exclude: [vendor,'Gemfile.lock', 'Gemfile','README.md']

@@ -10,6 +10,5 @@ gem 'rspec', '~> 3.3.0'
 gem 'mimic', '~> 0.4.3'
 
 group :jekyll_plugins do
-   gem 'react-jsx-sprockets'
    gem 'jekyll-assets', '~> 1.0.0'
- end
+end

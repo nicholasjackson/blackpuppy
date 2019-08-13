@@ -25,6 +25,6 @@ assets:
     - "_assets/jsx"
     - "_assets/javascripts/vendor"
 
-gems: [jekyll-assets, react-jsx-sprockets]
+gems: [jekyll-assets]
 
 exclude: [vendor,'Gemfile.lock', 'Gemfile','README.md']
